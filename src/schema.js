@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Mutation {
     addBook(title: String!, ownerId: ID!): Book!
     updateBookOwner(bookId: ID!, ownerId: ID!): Book
+    createOwner(name: String!): User!
   }
 `;
 

@@ -44,7 +44,18 @@ const resolvers = {
       });
       return updatedBook;
     },
-  },
+    createOwner: async (parent, args) => {
+      const {id, name} = args;
+      const newUser = await prisma.user.create({
+        data: {
+          name: name,
+        },
+      });
+      return newUser;
+    },
+},
+
+
   Book: {
     owner: (parent) => {
       return prisma.user.findUnique({
