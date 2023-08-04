@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=t3rm1nat0r
+      - MYSQL_USER=psych
+      - MYSQL_PASSWORD=t3rm1nat0r
+      - MYSQL_DATABASE=olyx
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - '3306:3306'
+volumes:
+  mysql:
