@@ -1,0 +1,17 @@
+{
+  "name": "olyx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.7.1"
+  }
+}
