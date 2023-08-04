@@ -42,6 +42,8 @@ The server will be running at `http://localhost:9090/`, and you can access the G
 
 ### Queries
 
+Find Books owned by a user
+
 ```graphql
 query {
   booksOwnedByOwner(ownerId: 1) {
@@ -54,7 +56,7 @@ query {
   }
 }
 ```
-
+List of all books
 ```graphql
 query {
   books {
@@ -67,7 +69,7 @@ query {
   }
 }
 ```
-
+Find book by Id
 ```graphql
 query {
   book(id: 1) {
@@ -80,7 +82,7 @@ query {
   }
 }
 ```
-
+Get List of Users
 ```graphql
 query {
   users {
@@ -89,7 +91,7 @@ query {
   }
 }
 ```
-
+Get user Details by Id
 ```graphql
 query {
   user(id: 1) {
@@ -100,7 +102,7 @@ query {
 ```
 
 ### Mutations
-
+Add new Book
 ```graphql
 mutation {
   addBook(title: "New Book", ownerId: 1) {
@@ -113,7 +115,7 @@ mutation {
   }
 }
 ```
-
+Update Book Owner
 ```graphql
 mutation {
   updateBookOwner(bookId: 1, ownerId: 2) {
@@ -127,6 +129,7 @@ mutation {
 }
 ```
 
+Create new User
 ```graphql
 mutation {
   createOwner(name: "John Doe") {
@@ -136,15 +139,4 @@ mutation {
 }
 ```
 
-```graphql
-mutation {
-  createBook(title: "New Book", ownerId: 1) {
-    id
-    title
-    owner {
-      id
-      name
-    }
-  }
-}
-```
+
